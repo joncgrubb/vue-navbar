@@ -13,10 +13,10 @@
 
 	<div v-cloak id ="menu">
 		<nav>
-			<a id="homeMenu" href="#">Home</a>
-			<a id="projectsMenu" href="#">Projects</a>
-			<a id="servicesMenu" href="#">Services</a>
-			<a id="contactMenu" href="#">Contact</a>
+			<a v-bind:class="{ active: homeActive }" v-on:click="makeActive('homeMenu', 'HOME')" id="homeMenu" href="#">Home</a>
+			<a v-bind:class="{ active: projectsActive }" v-on:click="makeActive('projectsMenu', 'PROJECTS')" id="projectsMenu" href="#">Projects</a>
+			<a v-bind:class="{ active: servicesActive }" v-on:click="makeActive('servicesMenu', 'SERVICES')" id="servicesMenu" href="#">Services</a>
+			<a v-bind:class="{ active: contactActive }" v-on:click="makeActive('contactMenu', 'CONTACT')" id="contactMenu" href="#">Contact</a>
 		</nav>
 		<div>
 			<p id="message">{{ message }}</p>
