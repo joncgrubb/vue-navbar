@@ -11,15 +11,18 @@
 		<h1>Vue Navbar</h1>
 	</div>
 
-	<div v-cloak id ="menu">
-		<nav>
-			<a v-bind:class="{ active: homeActive }" v-on:click="makeActive('homeMenu', 'HOME')" id="homeMenu" href="#">Home</a>
-			<a v-bind:class="{ active: projectsActive }" v-on:click="makeActive('projectsMenu', 'PROJECTS')" id="projectsMenu" href="#">Projects</a>
-			<a v-bind:class="{ active: servicesActive }" v-on:click="makeActive('servicesMenu', 'SERVICES')" id="servicesMenu" href="#">Services</a>
-			<a v-bind:class="{ active: contactActive }" v-on:click="makeActive('contactMenu', 'CONTACT')" id="contactMenu" href="#">Contact</a>
+	<div v-cloak id="menu">
+		<nav v-bind:class="active" v-on:click.prevent>
+			<a v-on:click="setActive('home')" class="home" href="#">Home</a>
+			<a v-on:click="setActive('projects')" class="projects" href="#">Projects</a>
+			<a v-on:click="setActive('services')" class="services" href="#">Services</a>
+			<a v-on:click="setActive('contact')" class="contact" href="#">Contact</a>
+			<!-- <a v-bind:class="{ active: servicesActive }" v-on:click="makeActive('servicesMenu', 'SERVICES')" id="servicesMenu" href="#">Services</a>
+			<a v-bind:class="{ active: contactActive }" v-on:click="makeActive('contactMenu', 'CONTACT')" id="contactMenu" href="#">Contact</a> -->
 		</nav>
-		<div>
-			<p id="message">{{ message }}</p>
+		<div id="message">
+			<p v-if="active" >Now displaying <b>{{ active }}</b></p>
+			<p v-else >Please click a menu item</p>
 		</div>
 	</div>
 

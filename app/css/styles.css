@@ -34,6 +34,15 @@ nav a {
 	letter-spacing: 2px;
 }
 
+#message p {
+	text-align: center;
+	font-size: 16px;
+}
+
+#message p b {
+	text-transform: uppercase;
+}
+
 .active {
 	background-color: #e35885;
 }
@@ -42,7 +51,9 @@ nav a {
 	display: none;
 }
 
-#message {
-	text-align: center;
-	font-size: 16px;
+nav.home .home,
+nav.projects .projects,
+nav.services .services,
+nav.contact .contact {
+	background-color: #e35885;
 }
