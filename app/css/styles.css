@@ -37,3 +37,12 @@ nav a {
 .active {
 	background-color: #e35885;
 }
+
+[v-cloak] {
+	display: none;
+}
+
+#message {
+	text-align: center;
+	font-size: 16px;
+}
