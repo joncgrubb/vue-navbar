@@ -1,0 +1,39 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 50px;
+}
+
+nav {
+	background-color: #5597B4;
+	margin: 60px auto 45px;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+
+nav a {
+	display: inline-block;
+	/*font-weight: bold;*/
+	font-size: 16px;
+	color: white;
+	text-transform: uppercase;
+	text-decoration: none !important;
+	padding-top: 18px;
+	padding-bottom: 18px;
+	padding-left: 30px;
+	padding-right: 30px;
+	letter-spacing: 2px;
+}
+
+.active {
+	background-color: #e35885;
+}
