@@ -56,4 +56,5 @@ nav.projects .projects,
 nav.services .services,
 nav.contact .contact {
 	background-color: #e35885;
+	color: white;
 }
